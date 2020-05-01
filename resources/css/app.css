@@ -1,0 +1,25 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+    --swiper-theme-color: #df1d17 !important;
+}
+
+.container {
+    @apply mx-auto px-4;
+}
+
+@screen md {
+    .cointainer {
+        @apply px-8;
+    }
+}
+
+@screen lg {
+    .container {
+        @apply px-12;
+    }
+}
