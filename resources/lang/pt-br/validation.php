@@ -180,5 +180,7 @@ return [
         'remember'              => 'lembrar-me',
         'image'                 => 'imagem',
         'button_text'           => 'texto do botão',
+        'cover_image'           => 'capa',
+        'images'                => 'imagens'
     ],
 ];
