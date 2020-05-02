@@ -1,6 +1,4 @@
 ---
 deployment:
     tasks:
-        - export DEPLOYPATH=/home/rwdufn3rxl3q/public_html/
-        - composer install
-        - /bin/cp -r ./. $DEPLOYPATH
+        - deploy.sh 2>&1
