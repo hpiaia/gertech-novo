@@ -2,7 +2,7 @@
     <div class="swiper-wrapper">
         @foreach ($customers as $customer)
             <div class="swiper-slide">
-                <img src="{{ $customer->image }}" class="mx-auto" />
+                <img src="{{ Storage::url($customer->image) }}" class="mx-auto" width="120" height="65" />
             </div>
         @endforeach
     </div>
