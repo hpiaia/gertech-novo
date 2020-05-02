@@ -1,4 +1,5 @@
 ---
 deployment:
     tasks:
-        - ./deploy.sh 2>&1
+        - pwd
+        - /bin/bash deploy.sh
