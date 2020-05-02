@@ -33,5 +33,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANxX8NWcmXRAlvmNS29qKJOBFepQsXp3A"></script>
         <script src="{{ mix('js/app.js') }}"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162779645-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-162779645-1');
+        </script>
     </body>
 </html>

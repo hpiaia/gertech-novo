@@ -17,8 +17,10 @@
         "laravel/nova": "*",
         "laravel/tinker": "^2.0",
         "optimistdigital/nova-translatable": "^1.5",
+        "spatie/laravel-analytics": "^3.9",
         "spatie/laravel-medialibrary": "^8.0.0",
         "spatie/laravel-translatable": "^4.3",
+        "tightenco/nova-google-analytics": "^0.1.7",
         "watson/active": "^5.0"
     },
     "require-dev": {
