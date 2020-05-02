@@ -18,7 +18,7 @@
                             <div class="flex shadow-md hover:shadow-lg lg:mx-2">
                                 <div class="w-1/4">
                                     <a href="{{ route('solutions.show', $solution) }}">
-                                        <img src="{{ $solution->cover_image }}" alt="" class="w-full h-48 object-cover">
+                                        <img src="{{ Storage::url($solution->cover_image) }}" alt="" class="w-full h-48 object-cover">
                                     </a>
                                 </div>
                                 <div class="w-3/4 px-4 py-2 flex flex-col">
