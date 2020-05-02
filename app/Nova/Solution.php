@@ -60,7 +60,6 @@ class Solution extends Resource
                 ->translatable(),
 
             Textarea::make('Descrição Curta', 'short_description')
-                ->rules('max:190')
                 ->translatable(),
 
             Image::make('Capa', 'cover_image')
