@@ -4,7 +4,7 @@
             <div class="swiper-slide">
                 <div class="relative">
                     <div class="hidden lg:block absolute w-5/12 right-0 h-full">
-                        <img src="{{ $banner->image }}" class="object-cover w-full h-full">
+                        <img src="{{ Storage::url($banner->image) }}" class="object-cover w-full h-full">
                         <div class="absolute top-0 left-0 bg-white w-32 transform rotate-10 -mt-16 -ml-16" style="height: 125%;"></div>
                     </div>
                     <div class="container h-full py-16 sm:py-20 lg:py-24">
