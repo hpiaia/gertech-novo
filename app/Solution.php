@@ -5,7 +5,6 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Translatable\HasTranslations;
 
 class Solution extends Model implements HasMedia
@@ -31,11 +30,5 @@ class Solution extends Model implements HasMedia
             'subject' => __('Interesse em') . ' ' . $this->title,
             'message' => __('Tenho interesse em') . ' ' . $this->title . '...'
         ]) . '#contact-form';
-    }
-
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion('images')
-            ->withResponsiveImages();
     }
 }
