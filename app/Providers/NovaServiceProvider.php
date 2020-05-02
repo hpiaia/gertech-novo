@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
+use Tightenco\NovaGoogleAnalytics\MostVisitedPagesCard;
+use Tightenco\NovaGoogleAnalytics\PageViewsMetric;
+use Tightenco\NovaGoogleAnalytics\VisitorsMetric;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -60,6 +63,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
+            (new PageViewsMetric())->width('1/2'),
+            (new VisitorsMetric())->width('1/2'),
+            (new MostVisitedPagesCard())->width('full'),
         ];
     }
 
