@@ -1,4 +1,4 @@
 ---
 deployment:
     tasks:
-        - deploy.sh 2>&1
+        - ./deploy.sh 2>&1
