@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="mt-4 text-gray-800">
-                        {{ $job->description }}
+                        {{ nl2br($job->description) }}
                     </div>
                 </div>
             @endforeach
