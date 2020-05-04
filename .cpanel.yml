@@ -1,6 +1,4 @@
 ---
 deployment:
     tasks:
-        - composer install
-        - /usr/local/bin/composer install
-        - /usr/bin/composer install
+        - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
