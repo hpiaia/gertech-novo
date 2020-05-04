@@ -1,0 +1,6 @@
+---
+deployment:
+    tasks:
+        - composer install
+        - /usr/local/bin/composer install
+        - /usr/bin/composer install
