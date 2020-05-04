@@ -32,11 +32,11 @@ class PageViewsPerDay extends Trend
             return $item['date']->format('d/m/Y');
         })->toArray();
 
-        $visitors = $analytics->map(function ($item) {
+        $pageViews = $analytics->map(function ($item) {
             return $item['pageViews'];
         })->toArray();
 
-        return (new TrendResult())->trend(array_combine($days, $visitors));
+        return (new TrendResult())->trend(array_combine($days, $pageViews));
     }
 
     /**
