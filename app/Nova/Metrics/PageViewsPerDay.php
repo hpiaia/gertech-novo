@@ -7,14 +7,14 @@ use Laravel\Nova\Metrics\Trend;
 use Laravel\Nova\Metrics\TrendResult;
 use Spatie\Analytics\Period;
 
-class VisitorsPerDay extends Trend
+class PageViewsPerDay extends Trend
 {
     /**
      * The displayable name of the metric.
      *
      * @var string
      */
-    public $name = 'Visitantes diários';
+    public $name = 'Visualizações diárias';
 
     /**
      * Calculate the value of the metric.
@@ -33,7 +33,7 @@ class VisitorsPerDay extends Trend
         })->toArray();
 
         $visitors = $analytics->map(function ($item) {
-            return $item['visitors'];
+            return $item['pageViews'];
         })->toArray();
 
         return (new TrendResult())->trend(array_combine($days, $visitors));
