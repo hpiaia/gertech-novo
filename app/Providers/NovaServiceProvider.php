@@ -2,13 +2,14 @@
 
 namespace App\Providers;
 
+use App\Nova\Metrics\MostVisitedPages;
 use App\Nova\Metrics\PageViewsPerDay;
+use App\Nova\Metrics\TopReferrers;
 use App\Nova\Metrics\VisitorsPerDay;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
-use Tightenco\NovaGoogleAnalytics\MostVisitedPagesCard;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -65,7 +66,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             (new VisitorsPerDay())->width('1/2'),
             (new PageViewsPerDay())->width('1/2'),
-            (new MostVisitedPagesCard())->width('full'),
+            (new MostVisitedPages())->width('1/2'),
+            (new TopReferrers())->width('1/2')
         ];
     }
 
