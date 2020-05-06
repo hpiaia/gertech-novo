@@ -34,7 +34,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="mt-4 text-gray-800">
+                    <div class="mt-4">
                         {!! nl2br($job->description) !!}
                     </div>
                 </div>
