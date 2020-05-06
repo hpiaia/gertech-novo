@@ -12,11 +12,7 @@ class Solution extends Model implements HasMedia
     use HasTranslations, InteractsWithMedia;
 
     public $translatable = [
-        'title', 'description', 'short_description', 'button_text'
-    ];
-
-    protected $casts = [
-        'specifications' => 'json'
+        'title', 'description', 'short_description', 'button_text', 'specifications'
     ];
 
     public function category()

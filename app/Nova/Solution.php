@@ -72,7 +72,8 @@ class Solution extends Resource
                 ->rules('required', 'max:4000')
                 ->translatable(),
 
-            KeyValue::make('Especificações', 'specifications'),
+            KeyValue::make('Especificações', 'specifications')
+                ->translatable(),
 
             Images::make('Imagens', 'images'),
         ];

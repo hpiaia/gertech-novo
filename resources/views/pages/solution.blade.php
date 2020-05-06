@@ -70,7 +70,7 @@
                 </h3>
 
                 <table class="w-full mt-4">
-                    @foreach ($solution->specifications as $key => $value)
+                    @foreach (json_decode($solution->specifications, true) as $key => $value)
                         <tr>
                             <td class="border-b px-2 py-2">{{ $key }}</td>
                             <td class="border-b px-2 py-2">{{ $value }}</td>
