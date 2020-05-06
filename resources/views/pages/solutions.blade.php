@@ -30,7 +30,7 @@
                                     <p class="text-sm mt-4">
                                         {{ $solution->short_description }}
                                     </p>
-                                    <div class="mt-auto flex">
+                                    <div class="mt-4 md:mt-auto flex">
                                         <a href="{{ route('solutions.show', $solution) }}" class="text-sm inline-flex items-center leading-5 font-medium rounded-md text-primary">
                                             <i class="fas fa-fw fa-info-circle mr-2"></i>
                                             @lang('Mais detalhes')
