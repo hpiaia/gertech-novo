@@ -11,7 +11,7 @@
         <div class="mt-4">
             @foreach ($jobs as $job)
                 <div class="border-b py-4">
-                    <div class="flex items-center justify-between">
+                    <div class="md:flex items-center justify-between">
                         <div>
                             <h2 class="text-2xl font-medium leading-7 text-primary sm:leading-9 sm:truncate">
                                 {{ $job->title }}
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="flex items-center">
-                            <span class="ml-3 shadow-sm rounded-md">
+                            <span class="mt-4 md:mt-0 md:ml-3 shadow-sm rounded-md">
                                 <a href="{{ $job->contactPath() }}" class="inline-flex items-center px-4 py-2 border border-transparent leading-5 font-medium rounded-md text-white bg-secondary hover:bg-secondary-dark">
                                     <i class="fas fa-fw fa-star text-white"></i>
                                     <span class="ml-2">
