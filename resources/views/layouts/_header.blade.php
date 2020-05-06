@@ -1,6 +1,6 @@
 <header class="z-10">
     <div class="bg-primary text-white">
-        <div class="container lg:px-12 py-2 text-sm flex items-center justify-between">
+        <div class="container lg:px-12 py-2 text-sm flex items-center">
             <div class="hidden lg:block">
                 <i class="fas fa-map-marker-alt text-secondary"></i>
                 <span class="ml-2">Rua José Bonifácio 727D, Chapecó - SC, Brazil</span>
@@ -12,7 +12,7 @@
                 <span class="ml-2">+55 49 3323-6794</span>
             </div>
 
-            <select class="text-black" id="locale-select">
+            <select class="text-black ml-auto" id="locale-select">
                 <option value="en" {{ app()->isLocale('en') ? 'selected' : '' }}>English</option>
                 <option value="es" {{ app()->isLocale('es') ? 'selected' : '' }}>Español</option>
                 <option value="pt-br" {{ app()->isLocale('pt-br') ? 'selected' : '' }}>Português</option>
