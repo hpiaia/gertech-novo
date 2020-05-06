@@ -30,7 +30,7 @@
                     @lang('Descrição')
                 </h3>
 
-                <div class="mt-4">
+                <div class="mt-4 solution-description">
                     {!! $solution->description !!}
                 </div>
             </div>
