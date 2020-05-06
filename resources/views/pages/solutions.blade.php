@@ -15,13 +15,13 @@
                 <div class="flex flex-wrap">
                     @foreach ($category->solutions as $solution)
                         <div class="w-full lg:w-1/2 mt-8">
-                            <div class="flex shadow-md hover:shadow-lg lg:mx-2">
-                                <div class="w-1/4">
+                            <div class="md:flex shadow-md hover:shadow-lg lg:mx-2">
+                                <div class="md:w-1/4">
                                     <a href="{{ route('solutions.show', $solution) }}">
-                                        <img src="{{ Storage::url($solution->cover_image) }}" alt="" class="w-full h-48 object-cover">
+                                        <img src="{{ Storage::url($solution->cover_image) }}" alt="" class="w-full h-32 md:h-48 object-cover">
                                     </a>
                                 </div>
-                                <div class="w-3/4 px-4 py-2 flex flex-col">
+                                <div class="md:w-3/4 px-4 py-4 md:py-2 flex flex-col">
                                     <h3 class="text-lg font-medium">
                                         <a href="{{ route('solutions.show', $solution) }}">
                                             {{ $solution->title }}
