@@ -3,7 +3,7 @@
         <div class="container lg:px-12 py-2 text-sm flex items-center">
             <div class="hidden lg:block">
                 <i class="fas fa-map-marker-alt text-secondary"></i>
-                <span class="ml-2">Rua José Bonifácio 727D, Chapecó - SC, Brazil</span>
+                <span class="ml-2">Rua José Bonifácio 727D, Chapecó - SC, @lang('Brasil')</span>
 
                 <i class="fas fa-envelope text-secondary ml-8"></i>
                 <span class="ml-2">gertech@gertech.ind.br</span>

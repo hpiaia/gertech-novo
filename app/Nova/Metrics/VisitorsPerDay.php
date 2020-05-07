@@ -28,15 +28,13 @@ class VisitorsPerDay extends Trend
             Period::days($request->get('range'))
         );
 
-        $days = $analytics->map(function ($item) {
-            return $item['date']->format('d/m/Y');
-        })->toArray();
+        $data = [];
 
-        $visitors = $analytics->map(function ($item) {
-            return $item['visitors'];
-        })->toArray();
+        foreach ($analytics as $item) {
+            $data[$item['date']->format('d/m/Y')] = $item['visitors'];
+        }
 
-        return (new TrendResult())->trend(array_combine($days, $visitors));
+        return (new TrendResult())->trend($data)->showLatestValue();
     }
 
     /**
@@ -47,6 +45,8 @@ class VisitorsPerDay extends Trend
     public function ranges()
     {
         return [
+            7 => '7 dias',
+            15 => '15 dias',
             30 => '30 dias',
             60 => '60 dias',
             90 => '90 dias',

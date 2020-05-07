@@ -28,15 +28,13 @@ class PageViewsPerDay extends Trend
             Period::days($request->get('range'))
         );
 
-        $days = $analytics->map(function ($item) {
-            return $item['date']->format('d/m/Y');
-        })->toArray();
+        $data = [];
 
-        $pageViews = $analytics->map(function ($item) {
-            return $item['pageViews'];
-        })->toArray();
+        foreach ($analytics as $item) {
+            $data[$item['date']->format('d/m/Y')] = $item['pageViews'];
+        }
 
-        return (new TrendResult())->trend(array_combine($days, $pageViews));
+        return (new TrendResult())->trend($data)->showLatestValue();
     }
 
     /**
@@ -47,6 +45,8 @@ class PageViewsPerDay extends Trend
     public function ranges()
     {
         return [
+            7 => '7 dias',
+            15 => '15 dias',
             30 => '30 dias',
             60 => '60 dias',
             90 => '90 dias',
@@ -60,6 +60,6 @@ class PageViewsPerDay extends Trend
      */
     public function uriKey()
     {
-        return 'visitors-per-day';
+        return 'page-views-per-day';
     }
 }
