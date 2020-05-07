@@ -12,11 +12,17 @@
                 <span class="ml-2">+55 49 3323-6794</span>
             </div>
 
-            <select class="text-black ml-auto" id="locale-select">
-                <option value="en" {{ app()->isLocale('en') ? 'selected' : '' }}>English</option>
-                <option value="es" {{ app()->isLocale('es') ? 'selected' : '' }}>Español</option>
-                <option value="pt-br" {{ app()->isLocale('pt-br') ? 'selected' : '' }}>Português</option>
-            </select>
+            <div class="flex ml-auto items-center">
+                <a href="{{ route('locale', 'pt-br') }}" class="mr-3">
+                    <img src="{{ asset('/img/flags/br.png') }}" alt="" class="w-6">
+                </a>
+                <a href="{{ route('locale', 'es') }}" class="mr-3">
+                    <img src="{{ asset('/img/flags/es.png') }}" alt="" class="w-6">
+                </a>
+                <a href="{{ route('locale', 'en') }}">
+                    <img src="{{ asset('/img/flags/us.png') }}" alt="" class="w-6">
+                </a>
+            </div>
         </div>
     </div>
 

@@ -23,12 +23,12 @@ class MostVisitedPages extends Partition
      */
     public function calculate(NovaRequest $request)
     {
-        $pages = \Analytics::fetchMostVisitedPages(Period::years(10), 5);
+        $analytics = \Analytics::fetchMostVisitedPages(Period::years(10), 5);
 
         $data = [];
 
-        foreach ($pages as $page) {
-            $data[$page['pageTitle']] = $page['pageViews'];
+        foreach ($analytics as $item) {
+            $data[$item['pageTitle']] = $item['pageViews'];
         }
 
         return $this->result($data);

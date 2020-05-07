@@ -1,10 +1,6 @@
 import Swiper from 'swiper';
 import GLightbox from 'glightbox';
 
-document.getElementById('locale-select').addEventListener('change', e => {
-    window.location.href = `/locale/${e.target.value}`;
-});
-
 document.getElementById('navbar-toggle').addEventListener('click', e => {
     e.preventDefault();
 

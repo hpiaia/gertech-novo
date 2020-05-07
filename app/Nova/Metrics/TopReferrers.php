@@ -23,12 +23,12 @@ class TopReferrers extends Partition
      */
     public function calculate(NovaRequest $request)
     {
-        $pages = \Analytics::fetchTopReferrers(Period::years(10), 5);
+        $analytics = \Analytics::fetchTopReferrers(Period::years(10), 5);
 
         $data = [];
 
-        foreach ($pages as $page) {
-            $data[$page['url']] = $page['pageViews'];
+        foreach ($analytics as $item) {
+            $data[$item['url']] = $item['pageViews'];
         }
 
         return $this->result($data);
