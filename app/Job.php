@@ -9,10 +9,20 @@ class Job extends Model
 {
     use HasTranslations;
 
+    /**
+     * The translatable attributes.
+     *
+     * @var string[]
+     */
     public $translatable = [
         'title', 'description'
     ];
 
+    /**
+     * Returns the url to the contact form.
+     *
+     * @return string
+     */
     public function contactPath()
     {
         return route('contact', [

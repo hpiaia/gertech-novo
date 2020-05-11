@@ -3,10 +3,16 @@
 namespace App\View\Components;
 
 use App\Banner;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\Component;
 
 class Banners extends Component
 {
+    /**
+     * Banner items.
+     *
+     * @var Collection|Banner[]
+     */
     public $banners = [];
 
     /**

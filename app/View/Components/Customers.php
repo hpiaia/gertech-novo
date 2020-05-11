@@ -3,10 +3,16 @@
 namespace App\View\Components;
 
 use App\Customer;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\Component;
 
 class Customers extends Component
 {
+    /**
+     * Customer items.
+     *
+     * @var Collection|Customer[]
+     */
     public $customers = [];
 
     /**
