@@ -28,7 +28,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $contact = $request->validate([
+        $data = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
@@ -36,7 +36,9 @@ class ContactController extends Controller
             'message' => 'required',
         ]);
 
-        Contact::query()->create($contact);
+        $contact = Contact::query()->create($data);
+
+        $contact->mail();
 
         session()->flash('success', true);
 
