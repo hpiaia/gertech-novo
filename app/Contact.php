@@ -24,7 +24,7 @@ class Contact extends Model
      */
     public function mail()
     {
-        return Mail::to('rudicarger@gmail.com')
+        return Mail::to('rudinei@gertech.ind.br')
             ->send(new ContactReceived($this));
     }
 }
