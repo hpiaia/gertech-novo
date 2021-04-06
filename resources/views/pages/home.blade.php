@@ -52,18 +52,12 @@
                 @lang('Nossa história')
             </h2>
             <p class="mt-8 text-gray-800 leading-relaxed text-justify">
-                @lang('Após uma longa jornada de mais de 15 anos de atuação profissional em grandes indústrias de referência mundial em equipamentos para a agroindústria, em 2013 Vanderlei Gerhart decide criar a Gertech Soluções Industriais para oferecer prestação de serviços de assistência técnica para máquinas nas linhas de pesagem e classificação em todo o Brasil.')
+                @lang('Após uma longa jornada de mais de 15 anos de atuação profissional em grandes indústrias de referência mundial em equipamentos para a agroindústria, em 2013 criamos a Gertech Soluções Industriais para oferecer prestação de serviços de assistência técnica para máquinas nas linhas de pesagem e classificação em todo o Brasil.')
 
                 <a href="{{ route('company') }}" class="text-secondary hover:underline">
                     @lang('leia mais')
                 </a>
             </p>
-            <div class="mt-8 font-medium">
-                Vanderlei Gerhart
-            </div>
-            <div class="text-sm text-gray-600">
-                @lang('Sócio proprietário')
-            </div>
         </div>
         <div class="lg:w-1/2 mt-8 lg:mt-0 relative">
             <div class="lg:pl-12 pb-12">
@@ -105,12 +99,6 @@
             <p class="mt-8 text-gray-800 leading-relaxed text-justify">
                 @lang('Reunimos mais de 20 anos de experiência em diversas áreas das engenharias: mecânica, elétrica, automação e software, nos possibilitando o desenvolvimento de tecnologia proprietária para embarcar em nossos equipamentos, e oferecer a máxima eficiência aos nossos clientes.')
             </p>
-            <div class="mt-8 font-medium">
-                Rudinei Carlos Gerhart
-            </div>
-            <div class="text-sm text-gray-600">
-                @lang('Sócio administrador')
-            </div>
         </div>
         <div class="lg:w-1/2 xl:pl-12 mt-8 lg:mt-0 relative">
             <h2 class="text-3xl text-primary font-medium">
